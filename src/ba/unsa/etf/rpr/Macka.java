@@ -1,8 +1,9 @@
 package ba.unsa.etf.rpr;
 
-public class Macka extends Zivotinja {
+public abstract class Macka extends Zivotinja {
 
-    public Macka(String id, String ime) {
+    public Macka(String id, String ime)throws NeispravanFormatIdaException {
         super(id, ime);
     }
+
 }
