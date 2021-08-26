@@ -1,4 +1,4 @@
-/*package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr;
 
 import org.junit.jupiter.api.Test;
 
@@ -103,7 +103,7 @@ class ZooVrtTest {
                 "Leo (Lav) : leo-1005", pionirska.dajTabelu().trim());
     }
 
-    @Test
+    /*@Test
     void dodaj4Test() {
         ZooVrt pionirska = new ZooVrt();
         try {
@@ -114,7 +114,7 @@ class ZooVrtTest {
         }
         assertEquals(1, pionirska.broj());
         assertEquals("Pikachu (Pokemon) : pikachu-222", pionirska.dajTabelu().trim());
-    }
+    }*/
 
     @Test
     void obrisiTest() {
@@ -186,7 +186,7 @@ class ZooVrtTest {
         assertEquals("tom-1003", tom.getId());
     }
 
-    @Test
+   /* @Test
     void koToTamoGovoriKlasaTest() {
         ZooVrt pionirska = new ZooVrt();
         Tigar tigger = null;
@@ -221,5 +221,5 @@ class ZooVrtTest {
         rezultat = pionirska.koToTamoGovori("pikapika");
         assertEquals(1, rezultat.size());
         assertTrue(rezultat.contains(pikachu));
-    }
-}*/
+    }*/
+}

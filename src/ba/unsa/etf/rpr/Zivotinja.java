@@ -5,6 +5,7 @@ private String id;
 private String ime;
 
     public Zivotinja(String id, String ime) throws NeispravanFormatIdaException {
+        String novoIme=Zivotinja.generisiId(ime);
         if(id.isBlank()) throw new IllegalArgumentException("Id ne može biti prazan");
         if(ime.isBlank()) throw new IllegalArgumentException("Ime ne može biti prazno");
         if(!provjeri(id,ime))throw new NeispravanFormatIdaException("Id nije ok");
@@ -53,4 +54,16 @@ return true;
         this.ime = ime;
     }
     public abstract String glas();
+    public static String generisiId(String ime){
+        String novoIme="";
+        for(int i=0;i<ime.length();i++){
+            if(ime.charAt(i)>='a' && ime.charAt(i)<='z') novoIme+=ime.charAt(i);
+            if(ime.charAt(i)>='A' && ime.charAt(i)<='Z') novoIme+=(char)(ime.charAt(i)+32);
+            if(ime.charAt(i)=='č' || ime.charAt(i)=='ć' || ime.charAt(i)=='Č' || ime.charAt(i)=='Ć') novoIme+='c';
+            if(ime.charAt(i)=='Š' || ime.charAt(i)=='š') novoIme+='s';
+            if(ime.charAt(i)=='Ž' || ime.charAt(i)=='ž') novoIme+='z';
+            if(ime.charAt(i)=='Đ' || ime.charAt(i)=='đ') novoIme+='d';
+        }
+        return novoIme;
+    }
 }
